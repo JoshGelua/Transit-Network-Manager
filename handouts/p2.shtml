@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Mac OS X https://github.com/w3c/tidy-html5/tree/c63cc39">
+        <meta charset="UTF-8"><!-- <link rel="stylesheet" href="http://www.cdf.toronto.edu/~csc207h/fall/styles.css" type="text/css"> -->
+        <title>
+CSC207: Project Phase 2
+	</title>
+    </head>
+    <body>
+        <div class="title">
+            <h1>
+                CSC207: Project Phase 2
+            </h1>
+        </div>
+        <p>
+<b>Deadline:</b> Tuesday 7 August, 2018 at 10 pm
+	</p>	
+	<h2>
+Phase 2: Requirements
+	</h2>
+	<p>
+Your Phase 2 program should satisfy the specifications from the Phase 1 outline and also include:<ul>
+<li>improvements to the design, based on the feedback you received from Phase 1.</li>
+<li>any Phase 1 functionality that was not completed before the Phase 1 deadline.</li>
+<li>updates to the design, based on the requirements listed in Further Details (below).</li>
+<li>a file called <code>log.txt</code> that contains a record of all changes made to all card balances, all card “taps”, and any exceptional events (for example: someone tapping off without tapping on).</li>
+<li>at least two major new features or many related smaller features that make your program even more useful to a city that has a transit system.</li>
+<li>a graphic user interface (GUI) that allows administrative users to request and view at least three different (useful) statistics (for example, total revenue for yesterday, etc.). Non-admin users should not have access to this. It should also allow all users to add/delete cards, add balances to cards, suspend cards, and add money to the balance on a card.</li>
+<li>a back end (based on phase 1) that no longer uses <code>events.txt</code> to process input. Instead, input comes directly from the user as a button click, checkbox click, text entered into a textbox, etc.</li>
+<li>a file called <code>duties.txt</code> where each team member writes their name and a point form list of their contributions to Phase 2.</li>
+<li>a file called <code>design.pdf</code> that either contains one uml diagram of your entire project, or a few uml diagrams, one for each part, and instructions on how they fit together. (This can be added any time between the deadline and your presentation. All other items listed above are due by the deadline.)</li>
+</ul></p>
+	<h2>
+Further Details
+	</h2>
+	<p>
+Your finished product should not print anything to standard output (the screen) anymore. Instead, you can have pop-up windows or other visual objects that can display your message.</p>
+	<p>
+Your project should run on the teach.cs server from a cloned copy of your repository. No extra downloading or installation of software should be required of you or the graders to operate your code.</p>
+	<p>
+Also, your code should check for invalid input so that it handles as much misuse as possible. Your program should check that all trips are handled the way you intend. For example, if your program does not consider tapping into and out of the same subway station to be a trip, make sure that it is not stored in the “three most recents trips”. </p>
+	<p>
+Likewise, if someone taps out of a subway station and then walks past a few bus stops before tapping onto a bus, your program should make sure that the new information is stored as a separate trip and not a continuation of the last one.</p>
+	<p>
+Some of your extra features should be statistical in nature, so that the user and admin user can view useful information. Decide how your system should store past information about trips, balances, revenue, etc. and after which point should this information be deleted. Your system should not store monthly revenue from 10 years ago. Instead, you can assume that the admin will archive any information that is too old to show up in your program’s statistical display. You can decide how old is too old.</p>
+	<p>
+You can use JavaFX, Swing, or any other package to create your windows, panels, buttons, etc. in your GUI. If you have a prefered way of generating code for your GUI, you may use it as long as you can understand the code and answer questions about it during your presentation.</p>
+	<p>
+Do not post any of your code to github or anywhere else outside of MarkUs, your home computer, or the teach.cs server until after the final exam for this course. Once the exam is over, you are welcome to post this code for potential employers to see. This is another reason to give much thought to your extra features! 
+	</p>
+	<h2>
+Extra Features
+	</h2>
+	<p>
+Your extra features should include some extra statistical tracking for users and admin users. Also, you should have other non-statistical extra features of your own design. If you are unsure whether or not your extra features are sufficient, please ask an instructor.</p> 
+	<p>
+Your lab TAs are also an excellent resource for discussing the design of your features. It is important that your extra features do not make any classes too large or unnecessarily complicate your design.</p>
+	<p>
+If you have designed your code well, it should be easy to add extra features. If you find that adding a certain feature is difficult, work on improving your existing design first. <b>You will get a higher mark from improving your overall design and easily adding extra features than forcing impressive features into a badly designed program.</b></p>
+	<h2>
+Project Presentations
+	</h2>
+	<p>
+Your Phase 2 mark will be determined by two graders (CSC207 TAs and/or Instructors) who will watch you present. The goal of your presentation is to help the grades get an accurate idea of what your program does, and how your design works. Your presentation consists of two parts: (1) your group presentation and (2) the “Lightning Round”.</p>
+	<p>
+Your group presentation must be a maximum of 10 minutes long. The graders will not let you continue beyond 10 minutes, so please be concise. Practice ahead of time. <b>Each group member must present for a minimum of 2 minutes each.</b> Your presentation should include a demonstration where you successfully create a user, a card for that user, add to the balance of the card, have the user tap onto and off of various transit vehicles until the cap is reached. Then show us how the user checks their balance, cancels their card, and uses any new features you created. You should demo your most impressive features and any statistical tools that you have created for your admin users. The graders might ask you to demonstrate other things, show them your UML, or otherwise help them understand your code.
+	</p>
+	<p>
+The “Lightning Round” is a series of questions which will be asked to the team and to be answered on an individual basis (at least one question to each team member). To answer a question, you will locate, in your code, certain method calls. For example, a question could be: “Where in your code is the fare deducted from a card’s balance upon exiting the subway?” You will be expected to answer the question without help from other team members, even if you did not write that part of the code. It is important that all team members contribute equally and are aware of the overall design.</p>
+	<p>
+Your code will be projected onto a screen behind you. Please make sure that at least one team member has a laptop with an HDMI connector, in case it is required. If you have a VGA connector, please bring that too.</p>
+	<h2>
+What To Submit
+	</h2>
+<ul>
+<li>Your code.</li>
+<li><code>design.pdf</code></li>
+<li>any external libraries that your program needs, but are not installed on the teach.cs server</li>
+<li><code>duties.txt</code></li>
+<li>You can submit <code>log.txt</code>, but it is not mandatory because you can let your code create a new one at the presentation. You will show us before and after execution so that we can see that your code worked.</li>
+<li>any configuration files you need</li>
+</ul>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" fx:id="userStartScreenPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="cardsTable" layoutX="122.0" layoutY="127.0" prefHeight="232.0" prefWidth="263.0">
+        <columns>
+          <TableColumn fx:id="cardIDCol" prefWidth="72.0" text="Card ID" />
+          <TableColumn fx:id="cardNameCol" prefWidth="98.0" text="Card Name" />
+            <TableColumn fx:id="cardBalanceCol" prefWidth="90.0" text="Balance" />
+        </columns>
+      </TableView>
+      <Text layoutX="107.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cards:" textAlignment="CENTER" wrappingWidth="119.21875">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="20.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="62.0">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Text layoutX="20.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Button fx:id="editBtn" layoutX="194.0" layoutY="29.0" mnemonicParsing="false" onAction="#changeName" text="Edit" />
+      <Button fx:id="addCardBtn" layoutX="451.0" layoutY="137.0" mnemonicParsing="false" onAction="#addNewCard" text="Add new Card" />
+      <Text fx:id="nameText" layoutX="84.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="97.21875">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Text fx:id="emailText" layoutX="75.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="263.0">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Button layoutX="469.0" layoutY="256.0" mnemonicParsing="false" onAction="#openCard" prefHeight="76.0" prefWidth="105.0" text="Open Card" />
+      <Button fx:id="refreshBtn" layoutX="492.0" layoutY="28.0" mnemonicParsing="false" onAction="#refreshScreen" text="Refresh" />
+   </children>
+</fx:root>

@@ -1,0 +1,14 @@
+STO1 Weston Rd
+STO2 Arrow Rd
+STO3 Signet Dr
+STO4 Norfinch Dr
+STO5 Jane St
+STO6 Driftwood Ave
+STO7 Sentinel Rd
+STO8 Keele St
+STO9 Finch West
+STO10 Alness St
+STO11 The West Mall
+STO12 The East Mall
+STO13 Kipling Ave
+STO14 Dundas St West

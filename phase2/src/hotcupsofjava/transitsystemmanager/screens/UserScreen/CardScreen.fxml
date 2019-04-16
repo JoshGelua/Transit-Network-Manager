@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.VBox" fx:id="cardScreenVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="407.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab1" text="Card Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="26.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Trips:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="26.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card Name:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="385.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:" wrappingWidth="103.31103515625">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="26.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card ID:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="cardName" layoutX="132.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="54.21875">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="cardID" layoutX="103.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tab1Balance" layoutX="464.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="suspendCardBtn" layoutX="342.0" layoutY="60.0" mnemonicParsing="false" onAction="#suspendCard" text="Suspend Card" />
+                        <Button fx:id="removeCardBtn" layoutX="482.0" layoutY="60.0" mnemonicParsing="false" onAction="#removeCard" text="Remove Card" />
+                        <TextArea fx:id="tripsText" layoutX="21.0" layoutY="140.0" prefHeight="222.0" prefWidth="496.0" />
+                        <Button fx:id="refreshBtn" layoutX="533.0" layoutY="157.0" mnemonicParsing="false" onAction="#refreshScreen" text="Refresh" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab2" text="Travel">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="subwayTable" layoutX="14.0" layoutY="69.0" prefHeight="200.0" prefWidth="202.0">
+                          <columns>
+                            <TableColumn fx:id="subwayNameCol" prefWidth="201.0" text="Station Name" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="busStopTable" layoutX="383.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="BusStopNameCol" prefWidth="199.0" text="Stop Name" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subway Stations:" wrappingWidth="157.03125">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="379.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bus Stops:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="tapOnSubwayBtn" layoutX="17.0" layoutY="278.0" mnemonicParsing="false" onAction="#tapOnSubway" prefHeight="51.0" prefWidth="85.0" text="Tap On" />
+                        <Button fx:id="tapOffSubwayBtn" layoutX="139.0" layoutY="278.0" mnemonicParsing="false" onAction="#tapOffSubway" prefHeight="52.0" prefWidth="93.0" text="Tap Off" />
+                        <Button fx:id="tapOnBusBtn" layoutX="380.0" layoutY="278.0" mnemonicParsing="false" onAction="#tapOnBus" prefHeight="52.0" prefWidth="84.0" text="Tap On" />
+                        <Button fx:id="tapOffBusBtn" layoutX="483.0" layoutY="278.0" mnemonicParsing="false" onAction="#tapOffBus" prefHeight="52.0" prefWidth="94.0" text="Tap Off" />
+                        <Button fx:id="specialBtn" layoutX="252.0" layoutY="290.0" mnemonicParsing="false" onAction="#accelerateTime" prefHeight="21.0" prefWidth="112.0" text="Special TapOff" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab3" text="Load Card">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="27.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tab3Balance" layoutX="173.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="27.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the amount to be added:">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <TextField fx:id="tab3BalanceInput" layoutX="396.0" layoutY="149.0" prefHeight="27.0" prefWidth="65.0" promptText="\$" />
+                        <Button fx:id="addAmountBtn" layoutX="478.0" layoutY="149.0" mnemonicParsing="false" onAction="#addBalance" text="Add amount" />
+                        <Label fx:id="tab3resultLbl" layoutX="300.0" layoutY="226.0" prefHeight="26.0" prefWidth="236.0" />
+                        <Label layoutX="95.0" layoutY="139.0" text="\$10">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="94.0" layoutY="185.0" text="\$20">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="94.0" layoutY="228.0" text="\$50">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="add10Btn" layoutX="144.0" layoutY="136.0" mnemonicParsing="false" onAction="#addBalanceTen" text="Add amount" />
+                        <Button fx:id="add20Btn" layoutX="144.0" layoutY="182.0" mnemonicParsing="false" onAction="#addBalanceTwenty" text="Add amount" />
+                        <Button fx:id="add50Btn" layoutX="144.0" layoutY="226.0" mnemonicParsing="false" onAction="#addBalanceFifty" text="Add amount" />
+                        <Text layoutX="396.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Custom Value:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</fx:root>

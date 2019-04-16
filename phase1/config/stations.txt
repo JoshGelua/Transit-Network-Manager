@@ -1,0 +1,7 @@
+STA1 Kipling connects STO8
+STA2 Islington
+STA3 Royal York
+STA4 Old Mill
+STA5 Jane connects STO5
+STA6 Spadina
+STA7 St George

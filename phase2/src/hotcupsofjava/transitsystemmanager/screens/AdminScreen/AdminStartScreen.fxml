@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.VBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="409.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="System">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="startDayBtn" layoutX="112.0" layoutY="65.0" mnemonicParsing="false" onAction="#startDay" prefHeight="59.0" prefWidth="142.0" text="Start Day" />
+                        <Button fx:id="endDayBtn" layoutX="113.0" layoutY="169.0" mnemonicParsing="false" onAction="#endDay" prefHeight="62.0" prefWidth="141.0" text="End Day" />
+                        <Button fx:id="changeBusCostBtn" layoutX="387.0" layoutY="66.0" mnemonicParsing="false" onAction="#changeBusCost" prefHeight="57.0" prefWidth="185.0" text="Change Bus Ride Cost" />
+                        <Button fx:id="changeSubwayCostBtn" layoutX="388.0" layoutY="130.0" mnemonicParsing="false" onAction="#changeSubwayCost" prefHeight="63.0" prefWidth="184.0" text="Change Subway Ride Cost" />
+                        <Button fx:id="changeTripCapBtn" layoutX="388.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeTripCap" prefHeight="63.0" prefWidth="184.0" text="Change Trip Cap Cost" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Transit Information">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="stopsText" layoutX="260.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="65.0">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="revenueText" layoutX="256.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.21875">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="finesText" layoutX="234.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="52.0">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="trueValueText" layoutX="249.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="62.0">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="24.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Stops Visited:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="24.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Revenue Collected:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="25.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fines Collected:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="27.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="True value of Revenue:" wrappingWidth="217.21875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="tab3RefreshBtn" layoutX="452.0" layoutY="49.0" mnemonicParsing="false" onAction="#refreshTab2Info" text="Refresh" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Log">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                     	<Button fx:id="genLogBtn" layoutX="500.0" layoutY="20.0" mnemonicParsing="false" onAction="#generateLog" prefWidth="85.0" text="Generate log" />
+                        <Button fx:id="refreshBtn" layoutX="500.0" layoutY="50.0" mnemonicParsing="false" onAction="#refreshLogs" prefWidth="85.0" text="Refresh list" />
+                        <Button fx:id="readLogBtn" layoutX="500.0" layoutY="80.0" mnemonicParsing="false" onAction="#readLog" prefWidth="85.0" text="Read log" />
+                        <TextArea fx:id="logArea" layoutX="14.0" layoutY="20.0" prefHeight="276.0" prefWidth="460.0" />
+                        <ComboBox fx:id="logCbx" layoutX="500.0" layoutY="110" prefWidth="85.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Statistics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tab4StopTable" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="158.0">
+                          <columns>
+                            <TableColumn fx:id="stopNameCol" prefWidth="157.0" text="Stop" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="userTable" layoutX="380.0" layoutY="14.0" prefHeight="200.0" prefWidth="179.0">
+                          <columns>
+                            <TableColumn fx:id="userNameCol" prefWidth="178.0" text="User" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="statsBtn" layoutX="179.0" layoutY="101.0" mnemonicParsing="false" onAction="#generateStopStats" text="Stop Statistics" />
+                        <Label fx:id="statsLabel" layoutX="14.0" layoutY="240.0" prefHeight="105.0" prefWidth="161.0" />
+                        <Button fx:id="userStatsBtn" layoutX="263.0" layoutY="39.0" mnemonicParsing="false" onAction="#userStatistics" text="User Statistics" />
+                        <Label fx:id="userStatsLabel" layoutX="380.0" layoutY="240.0" prefHeight="96.0" prefWidth="181.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</fx:root>

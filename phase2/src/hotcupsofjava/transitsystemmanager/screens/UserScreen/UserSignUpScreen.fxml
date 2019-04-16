@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" prefHeight="323.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="77.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" wrappingWidth="97.2548828125">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="12.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+      <Text layoutX="14.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Text layoutX="12.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:" />
+      <TextField fx:id="nameTextField" layoutX="76.0" layoutY="119.0" prefHeight="27.0" prefWidth="160.0" />
+      <TextField fx:id="emailTextField" layoutX="76.0" layoutY="170.0" prefHeight="27.0" prefWidth="160.0" />
+      <TextField fx:id="passwordTextField" layoutX="77.0" layoutY="220.0" />
+      <Button fx:id="createUserBtn" layoutX="88.0" layoutY="282.0" mnemonicParsing="false" onAction="#createNewUser" text="Create User" />
+      <Label fx:id="checkLabel" layoutX="71.0" layoutY="256.0" prefHeight="17.0" prefWidth="160.0" />
+   </children>
+</fx:root>

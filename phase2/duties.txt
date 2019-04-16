@@ -1,0 +1,20 @@
+Haresh Nasit:
+- AdminScreen package
+- TransitSystemScreen package
+- UserScreen package
+- Connecting the screens together.
+
+Richard Gan:
+- Serialization of the system
+- Tap processing
+- Configuration file parsing to start system
+- Managers package
+
+Josh Gelua:
+- Bug Fixing
+- Configuration of Cost customization
+- Detail editing of tap function
+
+Kara Perrin:
+- Bug fixing
+- Logging functionality

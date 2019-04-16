@@ -1,0 +1,19 @@
+0 system start 0
+0 card C1 tapOn station STA1
+10 card C4 tapOn station STA4
+20 card C5 tapOn busStop STO4 R1
+50 user U5 newCard C7
+60 user U5 load C7 50
+70 user U5 changeName Drake
+90 card C4 tapOff station STA1
+100 card C1 tapOff station STA7
+110 card C4 tapOn busStop STO8 R1
+130 card C7 tapOn busStop STO10 R1
+150 user U1 suspend C1
+170 card C4 tapOff busStop STO2 R1
+200 user U2 load C4 20
+400 card C4 tapOn station STA04
+420 card C4 tapOff station STA6
+430 user U2 viewRecentTrips C4
+450 card C7 tapOff busStop STA1 R1
+system stop

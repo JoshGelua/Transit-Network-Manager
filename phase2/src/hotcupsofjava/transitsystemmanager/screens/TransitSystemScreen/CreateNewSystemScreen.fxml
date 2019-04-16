@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<fx:root type="javafx.scene.layout.AnchorPane" prefHeight="437.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="112.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create New System">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of System:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charge for bus ride:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charge for subway ride:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameSystemLbl" layoutX="224.0" layoutY="128.0" />
+      <TextField fx:id="busRideLbl" layoutX="224.0" layoutY="182.0" />
+      <TextField fx:id="subwayRideLbl" layoutX="229.0" layoutY="238.0" />
+      <Button fx:id="createSystemBtn" layoutX="146.0" layoutY="335.0" mnemonicParsing="false" onAction="#createNewSystem" prefHeight="51.0" prefWidth="110.0" text="Create System" />
+   </children>
+</fx:root>

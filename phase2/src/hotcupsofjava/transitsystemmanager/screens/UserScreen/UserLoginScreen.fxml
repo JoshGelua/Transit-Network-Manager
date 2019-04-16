@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" fx:id="userLoginScreenVBox" prefHeight="326.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="61.0" layoutY="87.0" prefHeight="48.0" prefWidth="108.0" text="Name:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="145.0" prefHeight="22.0" prefWidth="108.0" text="User ID:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameText" layoutX="169.0" layoutY="97.0" />
+      <TextField fx:id="idText" layoutX="169.0" layoutY="142.0" />
+      <Text layoutX="201.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="91.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="loginBtn" layoutX="223.0" layoutY="217.0" mnemonicParsing="false" onAction="#checkLogin" text="Login" />
+      <Label fx:id="resultLabel" layoutX="184.0" layoutY="177.0" prefHeight="17.0" prefWidth="154.0" />
+      <Text layoutX="33.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not a User?" />
+      <Button fx:id="signUpBtn" layoutX="40.0" layoutY="274.0" mnemonicParsing="false" onAction="#createNewUser" text="Sign Up" />
+   </children>
+</fx:root>
